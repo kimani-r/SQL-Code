@@ -22,7 +22,7 @@
 --insert into employees values(009, 'Judith', 'Kangu', null, 'Female', 004,01)
 --insert into employees values(010, 'Hellen', 'Owuor', '2021-05-03', 'Female', 002, 01)
 --insert into employees values(011, 'Phanunah', 'Idris', '2021-05-03', 'Female', 005, 02)
---insert into employees values(012, 'Corlines', null, '2021-05-03', 'Male', 005, 02)
+--insert into employees values(012, 'Corlines', Juma, '2021-05-03', 'Male', 005, 02)
 
 
 --create table branch(
