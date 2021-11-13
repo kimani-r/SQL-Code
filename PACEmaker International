@@ -1,142 +1,116 @@
-----create database PACEmakerInternational
+create database PACEmakerInternational
 
 
---create table employees(
---employee_id int primary key,
---first_name varchar(90),
---last_name varchar(90),
---onboarding_date date,
---gender varchar(90),
---supervisor_id int,
---branch_id int
---)
+create table employees(
+employee_id int primary key,
+first_name varchar(90),
+last_name varchar(90),
+onboarding_date date,
+gender varchar(90),
+supervisor_id int,
+branch_id int
+)
 
---insert into employees values(001, 'Paul', 'Moturi', '2021-05-20', 'Male', null, 01)
---insert into employees values(002, 'Doris', 'Kiogora', '2013-05-04', 'Female', null, 01)
---insert into employees values(003, 'Samwel', 'Mbewa', null, 'Male', null, 01)
---insert into employees values(004, 'Brian', 'Macharia', null, 'Male', 003, 01)
---insert into employees values(005, 'Reuben', 'Siso', null, 'Male', 003, 02)
---insert into employees values(006, 'Felix', 'Khamisi', null, 'Male', 002, 01)
---insert into employees values(007, 'Teresia', 'Ndichu', null, 'Female', 004, 01)
---insert into employees values(008, 'Corazon', 'Mwabe', '2018-09-02', 'Female', 004, 01)
---insert into employees values(009, 'Judith', 'Kangu', null, 'Female', 004,01)
---insert into employees values(010, 'Hellen', 'Owuor', '2021-05-03', 'Female', 002, 01)
---insert into employees values(011, 'Phanunah', 'Idris', '2021-05-03', 'Female', 005, 02)
---insert into employees values(012, 'Corlines', Juma, '2021-05-03', 'Male', 005, 02)
-
-
---create table branch(
---branch_id int primary key,
---branch_name varchar(90),
---manager_id int,
---branch_opened_on date,
---foreign key (manager_id) references employees
---)
-
---insert into branch values(01, 'Nairobi', 001, '2013-09-03')
---insert into branch values(02, 'Kisumu', 005, '2019-03-14')
---insert into branch values(03, 'Kilifi', null, null)
+insert into employees values(001, 'Paul', 'Moturi', '2021-05-20', 'Male', null, 01)
+insert into employees values(002, 'Doris', 'Kiogora', '2013-05-04', 'Female', null, 01)
+insert into employees values(003, 'Samwel', 'Mbewa', null, 'Male', null, 01)
+insert into employees values(004, 'Brian', 'Macharia', null, 'Male', 003, 01)
+insert into employees values(005, 'Reuben', 'Siso', null, 'Male', 003, 02)
+insert into employees values(006, 'Felix', 'Khamisi', null, 'Male', 002, 01)
+insert into employees values(007, 'Teresia', 'Ndichu', null, 'Female', 004, 01)
+insert into employees values(008, 'Corazon', 'Mwabe', '2018-09-02', 'Female', 004, 01)
+insert into employees values(009, 'Judith', 'Kangu', null, 'Female', 004,01)
+insert into employees values(010, 'Hellen', 'Owuor', '2021-05-03', 'Female', 002, 01)
+insert into employees values(011, 'Phanunah', 'Idris', '2021-05-03', 'Female', 005, 02)
+insert into employees values(012, 'Corlines', Juma, '2021-05-03', 'Male', 005, 02)
 
 
---alter table employees
---add foreign key (branch_id)
---references branch
+create table branch(
+branch_id int primary key,
+branch_name varchar(90),
+manager_id int,
+branch_opened_on date,
+foreign key (manager_id) references employees
+)
+
+insert into branch values(01, 'Nairobi', 001, '2013-09-03')
+insert into branch values(02, 'Kisumu', 005, '2019-03-14')
+insert into branch values(03, 'Kilifi', null, null)
 
 
---create table schools(
---school_po_id int primary key,
---school_name varchar(90),
---branch_id int
---foreign key (branch_id)
---references branch
---employee_id int
---foreign key (emmployee_id)
---references employees
---)
-
---insert into schools values(001, 'Kamiti Primary', 01, 009)
---insert into schools values(002, 'Kawangware Primary', 01, 008)
---insert into schools values(003, 'Mathari Primary', 01, 009)
---insert into schools values(004, 'Maua Primary', 01, 009)
---insert into schools values(005, 'Kiboro Primary', 01, 009)
---insert into schools values(006, 'Bohra Primary', 01, 009)
---insert into schools values(007, 'Mahiga Primary', 01, 009)
---insert into schools values(008, 'Maua Primary', 01, 008)
---insert into schools values(009, 'Obwolo Primary', 02, 011)
---insert into schools values(010, 'Kibos Prison', 02, 011)
---insert into schools values(011, 'St Williams Learning Centre', 02, 011)
---insert into schools values(012, 'Lake Victoria', 02, 011)
---insert into schools values(013, 'Gifted Hands APBET', 02, 011)
---insert into schools values(014, 'Shalem Gardens',02, 011)
---insert into schools values(015, 'Simon Newberry APBET', 02, 011)
---insert into schools values(016, 'Emmaus Blessed', 02, 011)
---insert into schools values(017, 'Future Springs APBET', 02, 011)
---insert into schools values(018, 'Modoma Korando APBET', 02, 011)
---insert into schools values(009, 'Gachororo Primary', 01, 008)
---insert into schools values(020, 'Judimma Academic Centre', 01, 009)
---insert into schools values(021, 'Macky  Learning Centre', 01, 008)
---insert into schools values(022, 'Tumaini Primary', 01, 008)
---insert into schools values(023, 'Komarock Primary', 01, 008)
---insert into schools values(024, 'Pumwani Child Survival Centre', 01, 008)
---insert into schools values(025, 'Maji Mazuri Headstart', 01, 009)
---insert into schools values(026, 'Riverbank PEFA APBET', 01, 008)
---insert into schools values(027, 'Little Stars APBET 01, 008)
---insert into schools values(028, 'Ncooro Academy', 01, 008)
---insert into schools values(029, 'Lekurukuki Dream APBET', 01, 008)
+alter table employees
+add foreign key (branch_id)
+references branch
 
 
---CREATE TABLE works_with(
---  employee_id INT,
---  school_id INT,
---  PRIMARY KEY(employee_id, school_id),
---  FOREIGN KEY(employee_id) REFERENCES employees ON DELETE CASCADE,
---  FOREIGN KEY(school_id) REFERENCES schools ON DELETE CASCADE
---)
+create table schools(
+school_po_id int primary key,
+school_name varchar(90),
+branch_id int,
+foreign key (branch_id),
+references branch,
+employee_id int,
+foreign key (emmployee_id)
+references employees
+)
 
---insert into works_with values(009, 001)
---insert into works_with values(008, 002)
---insert into works_with values(009, 003)
---insert into works_with values(009, 004)
---insert into works_with values(009, 005)
---insert into works_with values(009, 006)
---insert into works_with values(009, 007)
---insert into works_with values(008, 008)
---insert into works_with values(011, 009)
---insert into works_with values(011, 010)
---insert into works_with values(011, 011)
---insert into works_with values(011, 012)
---insert into works_with values(011, 013)
---insert into works_with values(011, 014)
---insert into works_with values(011, 015)
---insert into works_with values(011, 016)
---insert into works_with values(011, 017)
---insert into works_with values(011, 018)
---insert into works_with values(008, 019)
---insert into works_with values(009, 020)
---insert into works_with values(008, 021)
---insert into works_with values(008, 022)
---insert into works_with values(008, 023)
---insert into works_with values(008, 024)
---insert into works_with values(009, 025)
---insert into works_with values(008, 026)
---insert into works_with values(008, 027)
---insert into works_with values(008, 028)
---insert into works_with values(008, 029)
+insert into schools values(001, 'Moja Primary', 01, 009)
+insert into schools values(002, 'Mbili Primary', 01, 008)
+insert into schools values(003, 'Tatu Primary', 01, 009)
+insert into schools values(004, 'Nne Primary', 01, 009)
+insert into schools values(013, 'Tano APBET', 02, 011)
+insert into schools values(017, 'Sita APBET', 02, 011)
+insert into schools values(018, 'Saba Primary', 02, 011)
+insert into schools values(009, 'Nane Primary', 01, 008)
+insert into schools values(022, 'Tisa Primary', 01, 008)
+insert into schools values(023, 'Kumi Primary', 01, 008)
+insert into schools values(024, 'Na moja Primary', 01, 008)
+insert into schools values(025, 'Na mbili APBET', 01, 009)
+insert into schools values(026, 'Na tatu APBET', 01, 008)
+insert into schools values(028, 'Na nne Academy', 01, 008)
+insert into schools values(029, 'Na tano Primary', 02, 011)
+insert into schools values(035, 'Na sita Primary', 02, 011)
+
+
+create table works_with(
+employee_id INT,
+school_id INT,
+primary key(employee_id, school_id),
+foreign key(employee_id) references employees on delete cascade,
+foreign key(school_id) references schools on delete cascade
+)
+
+insert into works_with values(009, 001)
+insert into works_with values(008, 002)
+insert into works_with values(009, 003)
+insert into works_with values(009, 004)
+insert into works_with values(011, 013)
+insert into works_with values(011, 017)
+insert into works_with values(011, 018)
+insert into works_with values(008, 009)
+insert into works_with values(008, 022)
+insert into works_with values(008, 023)
+insert into works_with values(008, 024)
+insert into works_with values(009, 025)
+insert into works_with values(008, 026)
+insert into works_with values(008, 028)
+insert into works_with values(011, 029)
+insert into works_with values(011, 035)
 
 
 --finding number of staff by gender
---select count (gender), gender
---from employees
-----group by gender
+select count (gender), gender
+from employees
+group by gender
 
 
 --how many APBET schools does PACE work with
---select*
---from schools
---where school_name like '%APBET%'
+select*
+from schools
+where school_name like '%APBET%'
 
 
 --which schools does Corazon directly work with?
---select school_id, school_name
---from schools
---where employee_id = 008
+select school_id, school_name
+from schools
+where employee_id = 008
