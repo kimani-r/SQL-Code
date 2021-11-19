@@ -33,6 +33,8 @@ branch_opened_on date,
 foreign key (manager_id) references employees
 )
 
+
+
 insert into branch values(01, 'Nairobi', 001, '2013-09-03')
 insert into branch values(02, 'Kisumu', 005, '2019-03-14')
 insert into branch values(03, 'Kilifi', null, null)
