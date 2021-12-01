@@ -1,4 +1,7 @@
-create database PACEmakerInternational
+--Please note that this is not a representation of the organisation, I merely used it as a frame. 
+
+
+create database MyCompany
 
 
 create table employees(
@@ -11,18 +14,18 @@ supervisor_id int,
 branch_id int
 )
 
-insert into employees values(001, 'Paul', 'Moturi', '2021-05-20', 'Male', null, 01)
-insert into employees values(002, 'Doris', 'Kiogora', '2013-05-04', 'Female', null, 01)
-insert into employees values(003, 'Samwel', 'Mbewa', null, 'Male', null, 01)
-insert into employees values(004, 'Brian', 'Macharia', null, 'Male', 003, 01)
-insert into employees values(005, 'Reuben', 'Siso', null, 'Male', 003, 02)
-insert into employees values(006, 'Felix', 'Khamisi', null, 'Male', 002, 01)
-insert into employees values(007, 'Teresia', 'Ndichu', null, 'Female', 004, 01)
-insert into employees values(008, 'Corazon', 'Mwabe', '2018-09-02', 'Female', 004, 01)
-insert into employees values(009, 'Judith', 'Kangu', null, 'Female', 004,01)
-insert into employees values(010, 'Hellen', 'Owuor', '2021-05-03', 'Female', 002, 01)
-insert into employees values(011, 'Phanunah', 'Idris', '2021-05-03', 'Female', 005, 02)
-insert into employees values(012, 'Corlines', Juma, '2021-05-03', 'Male', 005, 02)
+insert into employees values(001, 'John', 'Maina', '2021-05-20', 'Male', null, 01)
+insert into employees values(002, 'Lucy', 'Vitali', '2013-05-04', 'Female', null, 01)
+insert into employees values(003, 'Stephen', 'Mwale', null, 'Male', null, 01)
+insert into employees values(004, 'Bryson', 'Otieno', null, 'Male', 003, 01)
+insert into employees values(005, 'Roy', 'Ntalamu', null, 'Male', 003, 02)
+insert into employees values(006, 'Ian', 'Momanyi', null, 'Male', 002, 01)
+insert into employees values(007, 'Tracy', 'Shakale', null, 'Female', 004, 01)
+insert into employees values(008, 'Caroline', 'Nduku', '2018-09-02', 'Female', 004, 01)
+insert into employees values(009, 'Joyce', 'Watati', null, 'Female', 004,01)
+insert into employees values(010, 'Hellen', 'Of Troy', '2021-05-03', 'Female', 002, 01)
+insert into employees values(011, 'Peris', 'Chemutai', '2021-05-03', 'Female', 005, 02)
+insert into employees values(012, 'Calvin', 'Ireri', '2021-05-03', 'Male', 005, 02)
 
 
 create table branch(
@@ -106,13 +109,13 @@ from employees
 group by gender
 
 
---how many APBET schools does PACE work with
+--how many APBET schools does MyCompany work with
 select*
 from schools
 where school_name like '%APBET%'
 
 
---which schools does Corazon directly work with?
+--which schools does Caroline directly work with?
 select school_id, school_name
 from schools
 where employee_id = 008
