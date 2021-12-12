@@ -1,2 +1,2 @@
 # SQL-Code
-All my SQL-related code
+scripts from some of my tinkering in SQL
